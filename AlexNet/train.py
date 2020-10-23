@@ -47,18 +47,6 @@ validate_loader = torch.utils.data.DataLoader(validate_dataset,
                                               batch_size=4, shuffle=True,
                                               num_workers=0)
 
-# test_data_iter = iter(validate_loader)
-# test_image, test_label = test_data_iter.next()
-#
-# def imshow(img):
-#     img = img / 2 + 0.5  # unnormalize
-#     npimg = img.numpy()
-#     plt.imshow(np.transpose(npimg, (1, 2, 0)))
-#     plt.show()
-#
-# print(' '.join('%5s' % cla_dict[test_label[j].item()] for j in range(4)))
-# imshow(utils.make_grid(test_image))
-
 
 net = AlexNet(num_classes=5, init_weights=True)
 
